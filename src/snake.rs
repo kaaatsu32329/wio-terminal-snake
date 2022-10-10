@@ -19,7 +19,7 @@ const GRID_HEIGHT: u32 = DISPLAY_HEIGHT / CELL_SIZE as u32;
 
 pub struct Snake {
     pub head_sprite: Styled<Rectangle, PrimitiveStyle<Rgb565>>,
-    pub snake_direction: Direction,
+    snake_direction: Direction,
     pub cells_queue: Queue<(i32, i32), U64>,
 }
 
