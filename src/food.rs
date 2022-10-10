@@ -20,9 +20,9 @@ const GRID_HEIGHT: u32 = DISPLAY_HEIGHT / CELL_SIZE as u32;
 
 pub struct Food<'a> {
     pub sprite: Styled<Rectangle, PrimitiveStyle<Rgb565>>,
-    pub rng: Rand32,
-    pub food_style: &'a PrimitiveStyle<Rgb565>,
-    pub snake_style: &'a PrimitiveStyle<Rgb565>,
+    rng: Rand32,
+    food_style: &'a PrimitiveStyle<Rgb565>,
+    snake_style: &'a PrimitiveStyle<Rgb565>,
 }
 
 impl<'a> Food<'a> {
