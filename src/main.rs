@@ -68,6 +68,10 @@ fn main() -> ! {
         .fill_color(Rgb565::BLACK)
         .build();
 
+    let menu_style_marine = PrimitiveStyleBuilder::new()
+        .fill_color(Rgb565::CSS_AQUAMARINE)
+        .build();
+
     let food_style = PrimitiveStyleBuilder::new()
         .fill_color(Rgb565::CSS_ORANGE)
         .build();
@@ -129,19 +133,19 @@ fn main() -> ! {
                             Point::new(16 + 16, 16 + yoffset),
                             Point::new(16 + 8, yoffset),
                         )
-                        .into_styled(snake_style)
+                        .into_styled(menu_style_marine)
                         .draw(&mut display)
                         .unwrap();
 
                         // Draw a filled square
                         Rectangle::new(Point::new(52, yoffset), Size::new(16, 16))
-                            .into_styled(snake_style)
+                            .into_styled(menu_style_marine)
                             .draw(&mut display)
                             .unwrap();
 
                         // Draw a circle with a 3px wide stroke.
                         Circle::new(Point::new(88, yoffset), 17)
-                            .into_styled(snake_style)
+                            .into_styled(menu_style_marine)
                             .draw(&mut display)
                             .unwrap();
 
